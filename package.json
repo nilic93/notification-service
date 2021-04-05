@@ -1,0 +1,54 @@
+{
+  "name": "Notification",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:fix": "eslint \"src/\" --ext .ts --fix -c ./.eslintrc",
+    "lint": "eslint \"src/\" --ext .ts -c ./.eslintrc",
+    "type-check": "tsc --skipLibCheck",
+    "unit": "jest --coverage --projects ./unit-test.config.js",
+    "audit": "npm audit --production --audit-level=high"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.platform.vwfs.io/levi9-nl/DDA-api"
+  },
+  "author": "Stefan and Nikola Ilic",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.844.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^12.0.0",
+    "@types/aws-lambda": "^8.10.31",
+    "@types/jest": "^26.0.8",
+    "@types/node": "^12.7.4",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "aws-lambda": "^1.0.6",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "26.2.1",
+    "jest-html-reporters": "^2.0.2",
+    "jest-junit": "^7.0.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "lint-staged": "^9.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "2.2.1",
+    "serverless-prune-plugin": "^1.4.2",
+    "serverless-pseudo-parameters": "^2.5.0",
+    "serverless-webpack": "^5.3.1",
+    "ts-jest": "^26.1.4",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
