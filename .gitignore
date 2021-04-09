@@ -21,3 +21,4 @@ test-report.xml
 /.awcache
 /.vscode
 /.idea
+/.webpack

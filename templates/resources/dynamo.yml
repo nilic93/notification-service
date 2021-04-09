@@ -1,0 +1,13 @@
+service: dda-resources-dynamo
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ${opt:region, 'eu-central-1'}
+  stage: ${opt:stage, 'dev'}
+
+resources:
+  - ${file(templates/resources/tables/items.yml)}
+
+plugins:
+  - serverless-pseudo-parameters

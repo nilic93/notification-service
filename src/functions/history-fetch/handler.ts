@@ -3,7 +3,7 @@ const AWS = require('aws-sdk');
 
 AWS.config.update({ region: 'eu-west-1' });
 
-export const helloWorld = async (): Promise<void> => {
+export const historyFetch = async (): Promise<any> => {
 // Create publish parameters
   const params = {
     Message: JSON.stringify({
@@ -20,4 +20,11 @@ export const helloWorld = async (): Promise<void> => {
   params.TargetArn = 'arn:aws:sns:eu-west-1:346568244904:endpoint/APNS_SANDBOX/testSNS/73e61c4b-706b-3e77-ac41-c78873586a5b';
   publishTextPromise = await new AWS.SNS({ apiVersion: '2010-03-31' }).publish(params).promise();
   console.log('publishTextPromise 2', publishTextPromise);
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: 'Notification pushed successfully',
+    }),
+  };
 };

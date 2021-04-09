@@ -18,8 +18,13 @@ custom:
     packager: 'npm'   # Packager that will be used to package your external modules
 
 functions:
-  boilerplate:
-    handler: src/functions/boilerplate/handler.helloWorld
+  history-fetch:
+    handler: src/functions/history-fetch/handler.historyFetch
+    events:
+      - http:
+          method: get
+          path: history
+          cors: true
 
 # plugins can be added here
 plugins:
