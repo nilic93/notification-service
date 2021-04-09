@@ -22,6 +22,7 @@ export const historyFetch = async (): Promise<any> => {
 
   console.log('publishTextPromise 2', publishTextPromise);
 
+
   return {
     statusCode: 200,
     body: JSON.stringify({
