@@ -19,6 +19,7 @@ export const historyFetch = async (): Promise<any> => {
   console.log('publishTextPromise 1', publishTextPromise);
   params.TargetArn = 'arn:aws:sns:eu-west-1:346568244904:endpoint/APNS_SANDBOX/testSNS/73e61c4b-706b-3e77-ac41-c78873586a5b';
   publishTextPromise = await new AWS.SNS({ apiVersion: '2010-03-31' }).publish(params).promise();
+
   console.log('publishTextPromise 2', publishTextPromise);
 
   return {

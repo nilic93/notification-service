@@ -3,7 +3,7 @@ service: notification
 provider:
   name: aws
   runtime: nodejs12.x
-  region: eu-west-1
+  region: eu-central-1
   stage: ${opt:stage, 'dev'}
   iamManagedPolicies:
     - arn:aws:iam::aws:policy/AmazonSNSFullAccess
